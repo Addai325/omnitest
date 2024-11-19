@@ -1,0 +1,58 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="user-posts-container" id="up-top"><h1 class="user-posts">Posts by {{ user.username }}({{ posts.total }})</h1></div>
+    <div class="user-content">
+        {% for post in posts.items %}
+            <div class="user-container">
+                <h2 class="user-title"><a href="{{ url_for('posts.post', post_id=post.id) }}" class="user-title-link">{{ post.title }}</a></h2>
+                {% if post.image_file %}
+                    <img class="user-post-imaged" src="{{ url_for('static', filename='post_pics/' + post.image_file) }}" lazy="loading" alt="Post image">
+                {% endif %}
+                <!-- <p class="post-content">{{ post.content }}</p> -->
+                
+                <div class="user-aut-dte-img">
+                    <img src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}" lazy="loading" class="user-pro-pic" alt="Author Profile picture">
+                    <div class="user-aut-container"><a href="{{ url_for('users.user_posts', username=post.author.username) }}" class="user-aut">{{ post.author.username }}</a></div>
+                    <div class="user-date-container"><small class="user-date">{{ post.date_posted.strftime('%Y-%m-%d') }}</small></div>
+                </div>
+                
+            </div>
+        {% endfor %}
+    </div>
+        <div class="user-pagination-container">
+            {% for page_num in posts.iter_pages(left_edge=1, right_edge=1, left_current=1, right_current=2) %}
+                {% if page_num %}
+                    {% if posts.page == page_num %}
+                        <button class="user-pag-main-button"><a class="user-pag-main-link" href="{{ url_for('users.user_posts', username=user.username, page=page_num) }}">{{ page_num }}</a></button>
+                    {% else %}
+                        <button class="user-pag-button"><a class="user-pag-link" href="{{ url_for('users.user_posts', username=user.username, page=page_num) }}">{{ page_num }}</a></button>
+                    {% endif %}
+                {% else %}
+                    ...
+                {% endif %}
+            {% endfor %}
+        </div>
+        <footer>
+            <div class="user_posts-footer-container">
+                <!-- <h2 class="home-connect">Stay Connected:</h2> -->
+                <div class="home-social-channels">
+                    <a href="https://www.instagram.com/addai_325/" target="_blank" class="home-ig"><i class="fa-brands fa-square-instagram"></i></a>
+                    <a href="https://www.linkedin.com/in/ransford-addai-72b30b280/" class="home-In" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                    <a href="https://web.facebook.com/ransford.addai.96" target="_blank" class="home-fb"><i class="fa-brands fa-square-facebook"></i></a>
+                    <a href="https://github.com/Addai325" target="_blank" class="home-github"><i class="fa-brands fa-square-github"></i></a>
+                    
+                </div>
+                <div class="home-nav-links">
+                    <a href="{{ url_for('main.about') }}" class="home-abt-lnk">About us</a>  |
+                    <a href="{{ url_for('main.home') }}" class="home-hme-lnk">Home</a>
+                    <a href="#up-top" class="home-bttop-link">Back to top &uarr;</a>
+    
+                </div>
+                <div class="home-copyright">
+                    <small class="the-home-copyright">&copy; {{ curreny_year }} OMNIBLOGS. All rights reserved.</small>
+                </div>
+            </div>
+        </footer>
+    
+    
+{% endblock content %}

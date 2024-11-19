@@ -1,0 +1,185 @@
+@media (max-width:768px) {
+
+    body {
+        margin: 0;
+    }
+
+    .reg-container {
+        margin-top: 80px;
+        border: none;
+        font-family: roboto;
+        background-color: white;
+        padding-bottom: 50px;
+    }
+    
+
+    .the-fs {
+        border: none;
+    }
+
+    .reg-legend {
+        text-align: center;
+        font-size:30px;
+        font-weight: bold;
+        color: goldenrod;
+        padding-top: 15px;
+    }
+
+
+    .usn-lbl, .eml-lbl, .pswdd-lbl, .cp-lbl {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-family: roboto;
+    }
+
+    .usn, .eml, .pswdd, .cp {
+        display: block;
+        height: 30px;
+        width: 98%;
+        max-width: 98%;
+        font-family: roboto;
+        border: 1px solid darkgray;
+        font-family: roboto;
+    }
+
+    .the-subb {
+        margin-top: 10px;
+        margin-left: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 5px;
+        padding-right: 5px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background-color: goldenrod;
+        font-family: roboto, sans-serif;
+    }
+
+    .the-subb:active {
+        background-color: white;
+        color: goldenrod;
+    }
+
+    .already {
+        margin-top: 5px;
+        text-align: center;
+    }
+
+
+
+    .already-link {
+        text-decoration: none;
+        color: goldenrod;
+    }
+
+    .the-usn-error, .the-eml-error, .the-pswdd-error, .the-cp-error {
+        color: red;
+        display: block;
+        font-size: 13px;
+    }
+
+
+    .usn-error, .eml-error, .pswdd-error, .cp-error {
+        display: block;
+        border: 1px solid red;
+        height: 30px;
+        width: 98%;
+        max-width: 98%;
+    }
+}
+
+@media (min-width:769px) {
+    body {
+        margin: 0;
+    }
+
+    .reg-container {
+        margin-top: 80px;
+        border: 1px solid goldenrod;
+        width: 55%;
+        margin-left: 240px;
+        font-family: roboto, sans-serif;
+        padding: 30px;
+    }
+
+    .the-fs {
+        border: none;
+        padding-top: 50px;
+    }
+
+    .reg-legend {
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+        color: goldenrod;
+    }
+
+    .usn-lbl, .eml-lbl, .pswdd-lbl, .cp-lbl {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: goldenrod;
+
+    }
+
+    .usn-error ,.eml-error, .pswdd-error, .cp-error {
+        border: 1px solid red;
+        height: 35px;
+        width: 90%;
+    }
+
+    .the-usn-error, .the-eml-error, .the-pswdd-error, .the-cp-error {
+        display: block;
+        color: red;
+        font-size: 13px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .usn, .eml, .pswdd, .cp {
+        display: block;
+        height: 35px;
+        width: 90%;
+        margin-bottom: 5px;
+        border: 1px solid gray;
+    }
+
+    .the-subb {
+        border: none;
+        background-color: goldenrod;
+        color: white;
+        font-family: roboto, sans-serif;
+        padding: 7px 6px;
+        border-radius: 4px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+
+    .the-subb:hover {
+        color: goldenrod;
+        background-color: white;
+        border: 1px solid goldenrod;
+    }
+
+    .the-subb:active {
+        background-color: goldenrod;
+        color: white;
+    }
+
+    .already {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .small-already {
+        font-size: 12px;
+    }
+
+    .already-link {
+        text-decoration: none;
+        color: goldenrod;
+    }
+
+}

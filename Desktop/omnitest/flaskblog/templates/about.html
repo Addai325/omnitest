@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="about-container" id="about-top">
+        <div class="abt-img-container">
+            <img src="{{ url_for('static', filename='post_pics/' + 'AB.jpg') }}" lazy="loading" class="about-us-pic"  alt="Ransford Addai">
+        </div>
+
+        <small class="RA">Ransford Addai</small>
+        <h2>ABOUT OMNIBLOGS</h2>
+        <p>Welcome to OMNIBLOGS! We are dedicated to sharing knowledge and insights on various topics that interest our readers. Our goal is to create a community where everyone can learn, share, and grow together.</p>
+
+        <h2>Our Mission</h2>
+        <p>Our mission is to provide high-quality, informative, and engaging content that adds value to our readers' lives. We believe in the power of knowledge and strive to make learning accessible and enjoyable for everyone.</p>
+
+        <h2>How It Works</h2>
+        <p>On OMNIBLOGS, users can create and write their own posts, add images to their posts, and manage their content easily. Here's a brief overview of what you can do:</p>
+        <ul>
+            <li><strong>Create and Write Posts:</strong> Users can register and log in to their accounts to start writing posts. Share your thoughts, experiences, and knowledge on topics that interest you.</li>
+            <li><strong>Add Post Images:</strong> Enhance your posts by adding images. Simply upload an image while creating or editing your post to make it more visually appealing and engaging.</li>
+            <li><strong>Edit Posts:</strong> Need to make changes to your post? No problem! You can edit your posts at any time to update information, correct mistakes, or improve your content.</li>
+            <li><strong>Delete Posts:</strong> If you no longer want a post to be visible, you can delete it with ease. Manage your content and keep OMNIBLOGS tidy and relevant.</li>
+        </ul>
+
+        <h2>Join the Community</h2>
+        <p>If you are passionate about writing and have something valuable to share, we would love to hear from you! Join us on this journey and become a part of our growing community. Register today and start contributing to the conversation.</p>
+
+        <p>Thank you for visiting OMNIBLOGS. We hope you find the content here helpful and inspiring.</p>
+    </div>
+    <footer>
+        <div class="home-footer-container">
+            <h2 class="home-connect">Connect With Us:</h2>
+            <div class="home-social-channels">
+                <a href="https://www.instagram.com/addai_325/" target="_blank" class="home-ig"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ransford-addai-72b30b280/" class="home-In" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://web.facebook.com/ransford.addai.96" target="_blank" class="home-fb"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://github.com/Addai325" target="_blank" class="home-github"><i class="fa-brands fa-square-github"></i></a>
+                
+            </div>
+            <div class="home-nav-links">
+                <a href="{{ url_for('main.about') }}" class="home-abt-lnk">About us</a>  |
+                <a href="{{ url_for('main.home') }}" class="home-hme-lnk">Home</a>
+                <a href="#about-top" class="home-bttop-link">Back to top &uarr;</a>
+
+            </div>
+            <div class="home-copyright">
+                <small class="the-home-copyright">&copy; {{ curreny_year }} OMNIBLOGS. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+{% endblock content %}

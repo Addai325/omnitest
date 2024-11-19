@@ -1,0 +1,197 @@
+@media (max-width:768px) {
+
+    body {
+        margin: 0;
+    }
+    .about-container {
+        margin-top: 60px;
+        text-align: center;
+        padding: 20px;
+        font-family: roboto;
+        
+    }
+    .abt-img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-us-pic {
+        border-radius: 8px;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        margin-bottom: 5px;
+    }
+
+    .RA {
+        color: lightgray;
+        display: block;
+    }
+
+    .about-container h2 {
+        font-size: 1.5em;
+        color: #555;
+    }
+
+    .about-container p {
+        font-size: 1em;
+        line-height: 1.6;
+        color: #333;
+    }
+
+    .about-container ul li {
+        line-height: 1.6;
+        color: #333;
+        font-size: 1em;
+    }
+
+    .home-footer-container {
+        background-color: whitesmoke;
+        padding: 40px;
+        text-align: center;
+        padding-bottom: 40px;
+        margin-bottom: 0;
+    }
+
+    .home-social-channels {
+        margin-bottom: 20px;
+
+    }
+
+    .home-fb,.home-In, .home-github, .home-ig {
+        text-decoration: none;
+        color: goldenrod;
+        font-size: 22px;
+        margin-right: 5px;
+        
+    }
+
+    .home-nav-links {
+        margin-bottom: 15px;
+    }
+
+    .home-abt-lnk , .home-hme-lnk, .home-bttop-link {
+        text-decoration: none;
+        color: #555;
+        font-family: roboto;
+    }
+
+    .home-bttop-link {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .the-home-copyright {
+        color: lightgray;
+    }
+
+    .home-connect {
+        font-family: roboto, sans-serif;
+        color: goldenrod;
+    }
+
+
+}
+
+
+@media (min-width:769px) {
+
+    body {
+        margin: 0;
+    }
+    .about-container {
+        margin-top: 60px;
+        /* text-align: center; */
+        padding: 20px;
+        font-family: roboto;
+        
+    }
+
+    .abt-img-container {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .about-us-pic {
+        border-radius: 8px;
+        width: 300px;
+        height: 300px;
+        object-fit: cover;
+        margin-bottom: 5px;
+        
+    }
+
+    .RA {
+        color: lightgray;
+        display: block;
+        text-align: center;
+    }
+
+    .about-container h2 {
+        font-size: 1.5em;
+        color: #555;
+        text-align: center;
+    }
+
+    .about-container p {
+        font-size: 1em;
+        line-height: 1.6;
+        color: #333;
+        text-align: justify;
+    }
+
+    .about-container ul li {
+        line-height: 1.6;
+        color: #333;
+        font-size: 1em;
+    }
+
+    .home-footer-container {
+        background-color: whitesmoke;
+        padding: 40px;
+        text-align: center;
+        padding-bottom: 40px;
+        margin-bottom: 0;
+    }
+
+    .home-social-channels {
+        margin-bottom: 20px;
+
+    }
+
+    .home-fb,.home-In, .home-github, .home-ig {
+        text-decoration: none;
+        color: goldenrod;
+        font-size: 22px;
+        margin-right: 5px;
+        
+    }
+
+    .home-nav-links {
+        margin-bottom: 15px;
+    }
+
+    .home-abt-lnk , .home-hme-lnk, .home-bttop-link {
+        text-decoration: none;
+        color: #555;
+        font-family: roboto;
+    }
+
+    .home-bttop-link {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .the-home-copyright {
+        color: lightgray;
+    }
+
+    .home-connect {
+        font-family: roboto, sans-serif;
+        color: goldenrod;
+    }
+
+
+}

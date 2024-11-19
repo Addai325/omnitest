@@ -1,0 +1,64 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="reg-container">
+        <form method="post", action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="the-fs">
+                <legend class="reg-legend">REGISTER</legend>
+                <div>
+                    {{ form.username.label(class='usn-lbl') }}
+                    {% if form.username.errors %}
+                        {{ form.username(class='usn-error', placeholder='Choose a username') }}
+                        {% for error in form.username.errors %}
+                            <span class="the-usn-error">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.username(class='usn', placeholder='Choose a username') }}
+                    {% endif %}
+                    
+                </div>
+                <div>
+                    {{ form.email.label(class='eml-lbl') }}
+                    {% if form.email.errors %}
+                        {{ form.email(class='eml-error', placeholder='Type your Email...') }}
+                        {% for error in form.email.errors %}
+                            <span class="the-eml-error">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.email(class='eml', placeholder='Type your Email...') }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.password.label(class='pswdd-lbl') }}
+                    {% if form.password.errors %}
+                        {{ form.password(class='pswdd-error', placeholder='Create a password') }}
+                        {% for error in form.password.errors %}
+                            <span class="the-pswdd-error">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.password(class='pswdd', placeholder='Create a password') }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.confirm_password.label(class='cp-lbl') }}
+                    {% if form.confirm_password.errors %}
+                        {{ form.confirm_password(class='cp-error', placeholder='Confirm your password') }}
+                        {% for error in form.confirm_password.errors %}
+                            <span class="the-cp-error">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.confirm_password(class='cp', placeholder='Confirm your password') }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div>
+                {{ form.submit(class='the-subb') }}
+            </div>
+        </form>
+        <div class="already">
+            <small class="small-already">
+                Already have an account?<a class="already-link" href="{{ url_for('users.login') }}">Login</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}

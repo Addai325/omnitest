@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {% if title %}
+        <title>OMNIBLOGS-{{ title }}</title>
+    {% else %}
+        <title>OMNIBLOGS-Your Simplified and Solid Blogs</title>
+    {% endif %}
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{ url_for('static', filename='favicons/' + 'favicon.jpg') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='home.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='about.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='register.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='login.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='account.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='create_post.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='post.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='user_posts.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='reset_request.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='reset_token.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='errors.css') }}">
+</head>  
+<body>
+    <header>
+        <div class="mobile-own">
+            <div class="main-header">
+                <input type="checkbox" id="menuToggle" class="header-input">
+                <div class="ob-lbl">
+                    <a href="{{ url_for('main.home') }}" class="ob-link">OMNIBLOGS</a>
+                    <label for="menuToggle" class="hamburger-menu">&#9776;</label>
+                </div>
+                
+                <nav class="header-nav">
+                    <div class="header-links-col">
+                        <div class="reg-lgn">
+                            {% if current_user.is_authenticated %}
+                                <a href="{{url_for('posts.new_post') }}" onclick="CloseMenu()" class="crt">Create My Post</a         >
+                                <a href="{{ url_for('users.account') }}"  onclick="CloseMenu()" class="acct">Account</a>
+                                <a href="{{ url_for('users.logout') }}"  onclick="CloseMenu()" class="lgt">Logout</a>
+                            {% else %}
+                                <a href="{{ url_for('users.register') }}" onclick="CloseMenu()" class="reg">Register</a>
+                                <a href="{{ url_for('users.login') }}" onclick="CloseMenu()" class="lgn">Login</a>
+                            {% endif %}
+                        </div>
+                        <hr class="nav-line">
+                        <div class="hme-abt">
+                            <a href="{{ url_for('main.home') }}" onclick="CloseMenu()" class="hme">Home</a>
+                            <a href="{{ url_for('main.about') }}" onclick="CloseMenu()" class="abt">About us</a>
+                        </div>
+                    </div>
+                    
+                    
+                </nav>
+            </div>    
+    
+        </div>
+        <div class="desktop-own">
+            <div class="main-header">
+                
+                <div class="ob-lbl">
+                    <a href="{{ url_for('main.home') }}" class="ob-link">OMNIBLOGS</a>
+                </div>
+                
+                <nav class="header-nav">
+                    <div class="header-links-col">
+                        <div class="hme-abt">
+                            <a href="{{ url_for('main.home') }}" onclick="CloseMenu()" class="hme">Home</a>
+                            <a href="{{ url_for('main.about') }}" onclick="CloseMenu()" class="abt">About us</a>
+                        </div>
+                        <div class="reg-lgn">
+                            {% if current_user.is_authenticated %}
+                                <a href="{{url_for('posts.new_post') }}" onclick="CloseMenu()" class="crt">Create My Post</a         >
+                                <a href="{{ url_for('users.account') }}"  onclick="CloseMenu()" class="acct">Account</a>
+                                <a href="{{ url_for('users.logout') }}"  onclick="CloseMenu()" class="lgt">Logout</a>
+                            {% else %}
+                                <a href="{{ url_for('users.register') }}" onclick="CloseMenu()" class="reg">Register</a>
+                                <a href="{{ url_for('users.login') }}" onclick="CloseMenu()" class="lgn">Login</a>
+                            {% endif %}
+                        </div>
+                    </div>
+                    
+                    
+                </nav>
+            </div>    
+    
+        </div>
+            
+    </header>
+        {% with messages=get_flashed_messages(with_categories=True) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                    <div class="alert {% if category=='success' %}alert-success{% elif category=='danger' %}alert-danger{% elif category=='warning' %}alert-warning{% elif category=='info' %}alert-info{% endif %}">
+                        {{ message }}
+                    </div>
+                {% endfor %}
+            {% endif %}
+        {% endwith %}
+    
+    {% block content %}{% endblock content %}
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>

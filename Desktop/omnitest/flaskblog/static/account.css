@@ -1,0 +1,240 @@
+@media (max-width:768px) {
+    body {
+        margin: 0;
+    }
+
+    .account-container {
+        margin-top: 80px;
+        background-color: white;
+        border: none;
+        padding-bottom: 30px;
+        font-family: roboto, sans-serif;
+    }
+
+    .content-section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .pro-pic {
+        height: 50px;
+        width: 50px;
+        margin-top: 15px;
+        border-radius: 25px;
+        margin-left: 30px;
+        object-fit: cover;
+    }
+
+    .usn-eml {
+        margin-left: 50px;
+    
+    }
+
+    .usno {
+        margin-bottom: 0;
+    }
+
+    .emlo {
+        margin-top: 0;
+    }
+
+    .the-fstt {
+        border: none;
+    }
+
+    .acct-legend {
+        text-align: center;
+        font-size:30px;
+        font-weight: bold;
+        color: goldenrod;
+        padding-top: 15px;
+    }
+
+    .acct-usn-lbl, .acct-eml-lbl {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+
+
+    .acct-usn-error, .acct-eml-error {
+        display: block;
+        border: 1px solid red;
+        height: 30px;
+        width: 98%;
+    }
+
+    .the-acct-usn-error, .the-acct-eml-error {
+        color: red;
+        display: block;
+    }
+
+    .acct-pic-lbl {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .accct-usn, .accct-eml {
+        display: block;
+        height: 30px;     
+        width: 98%;
+        max-width: 98%;
+        font-family: roboto;
+        border: 1px solid darkgray;
+    }
+
+    .acct-pic {
+        display: block;
+        margin-top: 5px;
+    }
+
+    .acct-error {
+        display: block;
+        color: red;
+        font-size: 13px;
+    }
+
+    .the-acct-sub {
+        margin-top: 10px;
+        margin-left: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 10px;
+        padding-right: 10px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background-color: goldenrod;
+    }
+}
+
+
+
+@media (min-width:769px) {
+    body {
+        margin: 0;
+    }
+
+    .account-container {
+        margin-top: 100px;
+        background-color: white;
+        border: 1px solid goldenrod;
+        padding: 20px;
+        padding-bottom: 30px;
+        font-family: roboto, sans-serif;
+        width: 50%;
+        margin-left: 25%;
+    }
+
+    .content-section {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .pro-pic {
+        height: 50px;
+        width: 50px;
+        margin-top: 15px;
+        border-radius: 25px;
+        margin-left: 30px;
+        object-fit: cover;
+    }
+
+
+    .usn-eml {
+        margin-left: 50px;
+    }
+
+    .usno {
+        margin-bottom: 0;
+    }
+
+    .emlo {
+        margin-top: 0;
+    }
+
+    .the-fstt {
+        border: none;
+    }
+
+    .acct-legend {
+        text-align: center;
+        font-size:30px;
+        font-weight: bold;
+        color: goldenrod;
+        padding-top: 15px;
+    }
+
+    .acct-usn-lbl, .acct-eml-lbl {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: goldenrod;
+    }
+
+    .acct-usn-error, .acct-eml-error {
+        display: block;
+        border: 1px solid red;
+        height: 30px;
+        width: 98%;
+    }
+
+    .the-acct-usn-error, .the-acct-eml-error {
+        color: red;
+        display: block;
+        font-size: 13px;
+    }
+
+    .accct-eml, .accct-usn {
+        display: block;
+        height: 30px;     
+        width: 98%;
+        max-width: 98%;
+        font-family: roboto;
+        border: 1px solid darkgray;
+    }
+
+    .acct-pic-lbl {
+        display: block;
+        margin-top: 20px;
+        font-weight: bold;
+        color: goldenrod;
+    }
+
+    .acct-pic {
+        display: block;
+        margin-top: 10px;
+    }
+
+    .acct-error {
+        display: block;
+        color: red;
+        font-size: 13px;
+    }
+
+    .the-acct-sub {
+        border: none;
+        background-color: goldenrod;
+        color: white;
+        font-family: roboto, sans-serif;
+        padding: 7px 6px;
+        border-radius: 4px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+
+    .the-acct-sub:hover {
+        color: goldenrod;
+        background-color: white;
+        border: 1px solid goldenrod;
+    }
+
+    .the-acct-sub:active {
+        background-color: goldenrod;
+        color: white;
+    }
+
+    
+}

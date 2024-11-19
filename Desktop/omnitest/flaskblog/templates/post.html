@@ -1,0 +1,56 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="post-content-top" id="post-top">
+            <div class="post-container">
+                <div>
+                    <button class="update-button"><a class="update-link" href="{{ url_for('posts.update_post', post_id=post.id) }}">Update</a></button>
+                    <button class="del-confirm-button"><a class="del-confirm-link" href="{{ url_for('posts.delete_confirmation', post_id=post.id) }}">Delete</a></button>
+                </div>
+                <h1 class="posts-title">{{ post.title }}</h1>
+                {% if post.image_file %}
+                    <img class="posts-imaged" src="{{ url_for('static', filename='post_pics/' + post.image_file) }}" lazy="loading" alt="Post image">
+                {% endif %}
+                <p class="the-post-content">{{ post.content|safe }}</p>
+                
+                <div class="aut-dte-imgs">
+                    <img src="{{ url_for('static', filename='profile_pics/' + post.author.image_file) }}" lazy="loading" class="posts-pro-pic" alt="Author Profile picture">
+                    <div class="auts-container"><a href="{{ url_for('users.user_posts', username=post.author.username) }}" class="posts-aut">{{ post.author.username }}</a></div>
+                    <div class="dates-container"><small class="posts-date">{{ post.date_posted.strftime('%Y-%m-%d') }}</small></div>
+                </div>
+                
+            </div>
+    </div>
+    {% if should_delete %}
+        <div class="delete-section">
+            <div class="delete-confirm-container">
+                <h2 class="del-conf">DELETE CONFRMATION</h2>
+                <p class="sure-del">Are you sure you want to delete?</p>
+                <form methods= "post" action="{{ url_for('posts.delete_confirmation', post_id=post.id) }}">
+                    <button class="cancel-btn"><a class="cancel-lnk" href="{{ url_for('posts.post', post_id=post.id) }}">Cancel</a></button>
+                    <button class="del-btn"><a class="del-lnk" href="{{ url_for('posts.delete_post', post_id=post.id) }}">Delete</a></button>
+                </form>
+            </div>
+        </div>
+    {% endif %}
+    <footer>
+        <div class="post-footer-container">
+            <!-- <h2 class="home-connect">Stay Connected:</h2> -->
+            <div class="home-social-channels">
+                <a href="https://www.instagram.com/addai_325/" target="_blank" class="home-ig"><i class="fa-brands fa-square-instagram"></i></a>
+                <a href="https://www.linkedin.com/in/ransford-addai-72b30b280/" class="home-In" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+                <a href="https://web.facebook.com/ransford.addai.96" target="_blank" class="home-fb"><i class="fa-brands fa-square-facebook"></i></a>
+                <a href="https://github.com/Addai325" target="_blank" class="home-github"><i class="fa-brands fa-square-github"></i></a>
+                
+            </div>
+            <div class="home-nav-links">
+                <a href="{{ url_for('main.about') }}" class="home-abt-lnk">About us</a>  |
+                <a href="{{ url_for('main.home') }}" class="home-hme-lnk">Home</a>
+                <a href="#post-top" class="home-bttop-link">Back to top &uarr;</a>
+
+            </div>
+            <div class="home-copyright">
+                <small class="the-home-copyright">&copy; {{ curreny_year }} OMNIBLOGS. All rights reserved.</small>
+            </div>
+        </div>
+    </footer>
+{% endblock content %}

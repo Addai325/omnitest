@@ -1,0 +1,53 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="account-container">
+        <div class="content-section">
+            <img class="pro-pic" src="{{ image_file }}" lazy="loading" alt="Profile picture">
+            <div class="usn-eml">
+                <h2 class="usno">{{ current_user.username }}</h2>
+                <p class="emlo">{{ current_user.email }}</p>
+            </div>
+        </div>
+        <form method="post", action="" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <fieldset class="the-fstt">
+                <legend class="acct-legend">UPDATE ACCOUNT</legend>
+                
+                <div>
+                    {{ form.username.label(class='acct-usn-lbl') }}
+                    {% if form.username.errors %}
+                        {{ form.username(class='acct-usn-error') }}
+                        {% for error in form.username.errors %}
+                            <span class="the-acct-usn-error">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.username(class='accct-usn') }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.email.label(class='acct-eml-lbl') }}
+                    {% if form.email.errors %}
+                        {{ form.email(class='acct-eml-error') }}
+                        {% for error in form.email.errors %}
+                            <span class="the-acct-eml-error">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.email(class='accct-eml') }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.picture.label(class='acct-pic-lbl') }}
+                    {{ form.picture(class='acct-pic') }}
+                    {% if form.picture.errors %}
+                        {% for error in form.picture.errors %}
+                            <span class="acct-error">{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div>
+                {{ form.submit(class='the-acct-sub') }}
+            </div>
+        </form>
+    </div>
+{% endblock content %}

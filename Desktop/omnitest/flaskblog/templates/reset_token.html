@@ -1,0 +1,38 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="rt-container">
+        <form method="post", action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="rt-fst">
+                <legend class="rt-legend">RESET PASSWORD</legend>
+                
+                <div>
+                    {{ form.password.label(class='rt-pswd-lbl') }}
+                    {% if form.password.errors %}
+                        {{ form.password(class='rt-pswd-error', placeholder='Create a new password...') }}
+                        {% for error in form.password.errors %}
+                            <span class="rt-the-pswd-error">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.password(class='rt-pswd', placeholder='Create a new password...') }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.confirm_password.label(class='rt-cp-lbl') }}
+                    {% if form.confirm_password.errors %}
+                        {{ form.confirm_password(class='rt-cp-error', placeholder='Confirm your password...') }}
+                        {% for error in form.confirm_password.errors %}
+                            <span class="rt-the-cp-error">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.confirm_password(class='rt-cp', placeholder='Confirm your password...') }}
+                    {% endif %}
+                </div>
+            </fieldset>
+            <div>
+                {{ form.submit(class='rt-subbb') }}
+            </div>
+        </form>
+        
+    </div>
+{% endblock content %}

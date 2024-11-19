@@ -1,0 +1,387 @@
+@media (max-width:768px) {
+
+    body {
+        margin: 0;
+        
+    }
+
+    .home-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    
+    }
+
+    .home-container {
+        margin-top: 50px;
+        border: none;
+        width: 93%;
+        margin-bottom: 0px;
+        text-align: center;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+    }
+
+    .home-container+.home-container {
+        margin-top: 10px;
+    }
+
+    .post-pro-pic {
+        height: 30px;
+        width: 30px;
+        margin-top: 10px;
+        border-radius: 15px;
+        margin-right: 20px;
+        object-fit: cover;
+    }
+
+
+    .post-aut {
+        text-decoration: none;
+        color: goldenrod;
+        margin: 0 auto;
+        /* margin-right: 170px; */
+        margin-top: 10px;
+        font-weight: bold;
+        font-family: roboto, sans-serif;
+    }
+
+    .date {
+        color: darkgray;
+        margin-left: 10px;
+    }
+
+    .post-title {
+        color: goldenrod;
+        
+    }
+
+    .title-link {
+        text-decoration: none;
+        color: goldenrod;
+        font-family: roboto,sans-serif;
+    }
+
+    .aut-dte-img {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* justify-content: space-between; */
+        width: 100%;
+        
+        
+    }
+
+    .post-imaged {
+        width: 100%;
+        height: 200px;
+        margin-top: 10px;
+        object-fit: cover;
+        
+    }
+
+    .aut-container {
+        width: 100%;
+        margin-right: 100px;
+        margin-top: 10px;
+    }
+
+    .date-container {
+        width: 100%;
+    
+    }
+
+    .pagination-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .pag-main-button {
+        background-color: goldenrod;
+        border-radius: 5px;
+        border: 1px solid goldenrod;
+        padding: 5px;
+    }
+
+    .pag-main-link {
+        text-decoration: none;
+    }
+
+    .pag-button {
+        border-radius: 2px;
+        color: goldenrod;
+        border-radius: 5px;
+        border: 1px solid goldenrod;
+        padding: 5px;
+    }
+
+    .pag-link {
+        text-decoration: none;
+        color: goldenrod;
+    }
+
+    .footer-container {
+        background-color: white;
+        padding: 40px;
+        text-align: center;
+        padding-bottom: 40px;
+        margin-bottom: 0;
+    }
+
+    .home-social-channels {
+        margin-bottom: 20px;
+
+    }
+
+    .home-fb,.home-In, .home-github, .home-ig {
+        text-decoration: none;
+        color: goldenrod;
+        font-size: 22px;
+        margin-right: 5px;
+        
+    }
+
+    .home-nav-links {
+        margin-bottom: 15px;
+    }
+
+    .home-abt-lnk , .home-hme-lnk, .home-bttop-link {
+        text-decoration: none;
+        color: #555;
+        font-family: roboto;
+    }
+
+    .home-bttop-link {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .the-home-copyright {
+        color: lightgray;
+    }
+
+    .home-connect {
+        font-family: roboto, sans-serif;
+        color: goldenrod;
+    }
+
+}
+
+
+@media (min-width:769px) {
+
+    body {
+        margin: 0;
+        
+    }
+
+    .home-content {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        row-gap: 0px;
+        column-gap: 50px;
+        padding: 30px 70px;
+    
+    }
+
+    .home-container {
+        margin-top: 40px;
+        width: 100%;
+        margin-bottom: 0;
+        text-align: center;
+        background-color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        padding-bottom: 30px;
+        padding-left: 10px;
+        padding-right: 10px;
+        padding-top: 20px;
+        border: 1px solid goldenrod;
+    }
+
+    .home-container + .home-container +.home-container +.home-container {
+        margin-top: 10px;
+    }
+
+    .post-pro-pic {
+        height: 30px;
+        width: 30px;
+        margin-top: 10px;
+        border-radius: 15px;
+        margin-right: 20px;
+        object-fit: cover;
+    }
+
+
+    .post-aut {
+        text-decoration: none;
+        color: goldenrod;
+        margin: 0 auto;
+        margin-top: 10px;
+        font-weight: bold;
+        font-family: roboto, sans-serif;
+    }
+
+    .post-aut:hover {
+        color: black;
+    }
+
+    .post-aut:active {
+        color: goldenrod;
+    }
+
+    .date {
+        color: darkgray;
+        margin-left: 10px;
+    }
+
+    .post-title {
+        color: goldenrod;
+        
+    }
+
+    .title-link {
+        text-decoration: none;
+        color: goldenrod;
+        font-family: roboto,sans-serif;
+    }
+
+    .title-link:hover {
+        color: black;
+    }
+
+    .aut-dte-img {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        /* justify-content: space-between; */
+        width: 100%;
+        
+        
+    }
+
+    .post-imaged {
+        width: 100%;
+        height: 200px;
+        margin-top: 10px;
+        object-fit: cover;
+    }
+
+    .aut-container {
+        width: 100%;
+        margin-right: 100px;
+        margin-top: 10px;
+    }
+
+    .date-container {
+        width: 100%;
+    
+    }
+
+    .pagination-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        margin-top: 50px;
+        margin-bottom: 50px;
+    }
+
+    .pag-main-button {
+        background-color: goldenrod;
+        border-radius: 5px;
+        border: 1px solid goldenrod;
+        padding: 5px;
+        cursor: pointer;
+    }
+
+    .pag-main-button:hover {
+        opacity: 0.4;
+    }
+
+
+
+    .pag-main-link {
+        text-decoration: none;
+    }
+
+    .pag-button {
+        border-radius: 2px;
+        color: goldenrod;
+        border-radius: 5px;
+        border: 1px solid goldenrod;
+        padding: 5px;
+        cursor: pointer;
+    }
+    .pag-button:hover {
+        opacity: 0.4;
+    }
+
+    .pag-link {
+        text-decoration: none;
+        color: goldenrod;
+    }
+
+    .footer-container {
+        background-color: white;
+        padding: 40px;
+        text-align: center;
+        padding-bottom: 40px;
+        margin-bottom: 0;
+    }
+
+    .home-social-channels {
+        margin-bottom: 20px;
+
+    }
+
+    .home-fb,.home-In, .home-github, .home-ig {
+        text-decoration: none;
+        color: goldenrod;
+        font-size: 22px;
+        margin-right: 5px;
+        
+    }
+
+    .home-nav-links {
+        margin-bottom: 15px;
+    }
+
+    .home-abt-lnk , .home-hme-lnk, .home-bttop-link {
+        text-decoration: none;
+        color: #555;
+        font-family: roboto;
+    }
+
+    .home-bttop-link {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .the-home-copyright {
+        color: lightgray;
+    }
+
+    .home-connect {
+        font-family: roboto, sans-serif;
+        color: goldenrod;
+    }
+
+
+
+
+    
+
+}

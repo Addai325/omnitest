@@ -1,0 +1,154 @@
+@media (max-width:768px) {
+
+    body {
+        margin: 0;
+    }
+
+    .rt-container {
+        margin-top: 80px;
+        border: none;
+        font-family: roboto;
+        background-color: white;
+        padding-bottom: 50px;
+    }
+
+    .rt-fst {
+        border: none;
+    }
+
+    .rt-legend {
+        text-align: center;
+        font-size:30px;
+        font-weight: bold;
+        color: goldenrod;
+        padding-top: 15px;
+    }
+
+    .rt-pswd-lbl, .rt-cp-lbl {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .rt-pswd, .rt-cp {
+        display: block;
+        height: 30px;
+        width: 98%;
+        max-width: 98%;
+        font-family: roboto;
+        border: 1px solid darkgray;
+    }
+
+
+    .rt-subbb {
+        margin-top: 10px;
+        margin-left: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background-color: goldenrod;
+        font-family: roboto, sans-serif;
+    }
+
+    .rt-subbb:active {
+        background-color: white;
+        color: goldenrod;
+    }
+
+    
+    .rt-pswd-error, .rt-cp-error {
+        color: red;
+        display: block;
+    }
+
+    .rt-the-pswd-error, .rt-the-cp-error {
+        display: block;
+        border: 1px solid red;
+        height: 30px;
+        width: 98%;
+        max-width: 30px;
+    }
+}
+
+
+
+@media (min-width:769px) {
+    body {
+        margin: 0;
+    }
+
+    .rt-container {
+        margin-top: 80px;
+        border: 1px solid goldenrod;
+        width: 55%;
+        margin-left: 240px;
+        font-family: roboto, sans-serif;
+        padding: 30px;
+    }
+
+    .rt-fst {
+        border: none;
+        padding-top: 50px;
+    }
+
+    .rt-legend {
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+        color: goldenrod;
+    }
+
+    .rt-pswd-lbl, .rt-cp-lbl {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: goldenrod;
+    }
+
+    .rt-cp-error, .rt-pswd-error {
+        border: 1px solid red;
+        height: 35px;
+        width: 90%;
+    }
+
+    .rt-the-pswd-error, .rt-the-cp-error {
+        display: block;
+        color: red;
+        font-size: 13px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .rt-pswd, .rt-cp {
+        display: block;
+        height: 35px;
+        width: 90%;
+        margin-bottom: 5px;
+        border: 1px solid gray;
+    }
+
+    .rt-subbb {
+        border: none;
+        background-color: goldenrod;
+        color: white;
+        font-family: roboto, sans-serif;
+        padding: 7px 6px;
+        border-radius: 4px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+
+    .rt-subbb:hover {
+        color: goldenrod;
+        background-color: white;
+        border: 1px solid goldenrod;
+    }
+
+    .rt-subbb:active {
+        background-color: goldenrod;
+        color: white;
+    }
+}

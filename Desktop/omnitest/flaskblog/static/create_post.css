@@ -1,0 +1,190 @@
+@media (max-width:768px) {
+
+    body {
+        margin: 0;
+    }
+    
+
+    .crt-container {
+        margin-top: 50px;
+        border: none;
+        font-family: roboto;
+        background-color: white;
+        padding-bottom: 50px;
+    }
+
+    .crt-fst {
+        border: none;
+    }
+
+    .crt-legend {
+        text-align: center;
+        font-size:30px;
+        font-weight: bold;
+        color: goldenrod;
+        padding-top: 15px;
+    }
+
+    .tit-lbl, .cntn-lbl {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-weight: bold;
+    }
+
+    .tit, .cntn {
+        display: block;
+        height: 30px;
+        width: 98%;
+        font-family: roboto;
+        border: 1px solid darkgray;
+    }
+
+    .crt-pic-lbl {
+        margin-top: 5px;
+        font-weight: bold;
+        display: block;
+    }
+
+    .crt-pic {
+        display: block;
+        margin-top: 3px;
+    }
+
+
+
+    .crt-sub {
+        margin-top: 10px;
+        margin-left: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background-color: goldenrod;
+        font-family: roboto, sans-serif;
+    }
+
+    .crt-sub:active {
+        background-color: white;
+        color: goldenrod;
+    }
+
+
+
+    .the-tit-error, .the-cntc-error, .the-crt-error {
+        color: red;
+        display: block;
+        font-size: 13px;
+    }
+
+    .tit-error, .cntc-error {
+        display: block;
+        border: 1px solid red;
+        height: 30px;
+        width: 98%;
+    }
+
+    
+}
+
+
+
+@media (min-width:769px) {
+    body {
+        margin: 0;
+    }
+
+    .crt-container {
+        margin-top: 70px;
+        border: none;
+        font-family: roboto;
+        background-color: white;
+        padding-bottom: 50px;
+        width: 80%;
+        margin-left: 10%;
+    }
+
+    .crt-fst {
+        border: none;
+    }
+
+    .crt-legend {
+        text-align: center;
+        font-size:30px;
+        font-weight: bold;
+        color: goldenrod;
+        padding-top: 15px;
+    }
+
+    .tit-lbl, .cntn-lbl {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        color: goldenrod;
+        font-size: 20px;
+    }
+
+    .tit, .cntn {
+        display: block;
+        height: 30px;
+        width: 98%;
+        font-family: roboto;
+        border: 1px solid darkgray;
+    }
+
+    .crt-pic-lbl {
+        margin-top: 5px;
+        font-weight: bold;
+        display: block;
+        color: goldenrod;
+    }
+
+    .crt-pic {
+        display: block;
+        margin-top: 3px;
+    }
+
+
+
+    .crt-sub {
+        border: none;
+        background-color: goldenrod;
+        color: white;
+        font-family: roboto, sans-serif;
+        padding: 8px 12px;
+        border-radius: 5px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+
+
+    .crt-sub:hover {
+        color: goldenrod;
+        background-color: white;
+        border: 1px solid goldenrod;
+    }
+
+    .crt-sub:active {
+        background-color: goldenrod;
+        color: white;
+    }
+
+
+
+    .the-tit-error, .the-cntc-error, .the-crt-error {
+        color: red;
+        display: block;
+        font-size: 13px;
+    }
+
+    .tit-error, .cntc-error {
+        display: block;
+        border: 1px solid red;
+        height: 30px;
+        width: 98%;
+    }
+}

@@ -1,0 +1,50 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="lgn-container">
+        <form method="post", action="">
+            {{ form.hidden_tag() }}
+            <fieldset class="the-fst">
+                <legend class="lgn-legend">LOGIN</legend>
+                
+                <div>
+                    {{ form.email.label(class='emll-lbl') }}
+                    {% if form.email.errors %}
+                        {{ form.email(class='emll-error', placeholder='Type your email...') }}
+                        {% for error in form.email.errors %}
+                            <span class="the-emll-error">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.email(class='emll', placeholder='Type your email...') }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.password.label(class='pswd-lbl') }}
+                    {% if form.password.errors %}
+                        {{ form.password(class='pswd-error', placeholder='Input your password..') }}
+                        {% for error in form.password.errors %}
+                            <span class="the-pswd-error">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.password(class='pswd', placeholder='Input your password..') }}
+                    {% endif %}
+                </div>
+                <div class="rememb">
+                    {{ form.remember(class='rememb-checkbox') }}
+                    {{ form.remember.label(class='rememb-lbl') }}
+                </div>
+               
+            </fieldset>
+            <div>
+                {{ form.submit(class='the-subbb') }}
+            </div>
+            <div class="forgot-pswd">
+                <a href="{{ url_for('users.reset_request') }}" class="forgot-pswd-link"><small class="forgot">Forgot Password?</small></a>
+            </div>
+        </form>
+        <div class="lgn-already">
+            <small class="lgn-small-already">
+                New user?<a class="lgn-already-link" href="{{ url_for('users.register') }}">Register here</a>
+            </small>
+        </div>
+    </div>
+{% endblock content %}

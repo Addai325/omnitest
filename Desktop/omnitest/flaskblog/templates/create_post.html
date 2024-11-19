@@ -1,0 +1,49 @@
+{% extends 'layout.html' %}
+{% block content %}
+    <div class="crt-container">
+        <form method="post", action="" enctype="multipart/form-data">
+            {{ form.hidden_tag() }}
+            <fieldset class="crt-fst">
+                <legend class="crt-legend">{{ legend }}</legend>
+                
+                <div>
+                    {{ form.title.label(class='tit-lbl') }}
+                    {% if form.title.errors %}
+                        {{ form.title(class='tit-error', placeholder='ENTER POST TITLE HERE..') }}
+                        {% for error in form.title.errors %}
+                            <span class="the-tit-error">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.title(class='tit', placeholder='ENTER POST TITLE HERE..') }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.content.label(class='cntn-lbl') }}
+                    {% if form.content.errors %}
+                        {{ form.content(class='cntc-error') }}
+                        {% for error in form.content.errors %}
+                            <span class="the-cntc-error">{{ error }}</span>
+                        {% endfor %}
+                    {% else %}
+                        {{ form.content(class='cntn') }}
+                    {% endif %}
+                </div>
+                <div>
+                    {{ form.picture.label(class='crt-pic-lbl') }}
+                    {{ form.picture(class='crt-pic') }}
+                    {% if form.picture.errors %}
+                        {% for error in form.picture.errors %}
+                            <span class="the-crt-error">{{ error }}</span>
+                        {% endfor %}
+                    {% endif %}
+                </div>
+               
+            </fieldset>
+            <div>
+                {{ form.submit(class='crt-sub') }}
+            </div>
+        </form>
+        {{ ckeditor.load() }}
+        {{ ckeditor.config(name='content') }}
+    </div>
+{% endblock content %}

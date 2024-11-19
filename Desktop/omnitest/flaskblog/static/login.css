@@ -1,0 +1,224 @@
+@media (max-width:768px) {
+
+    body {
+        margin: 0;
+    }
+
+    .lgn-container {
+        margin-top: 80px;
+        border: none;
+        font-family: roboto;
+        background-color: white;
+        padding-bottom: 50px;
+    }
+
+    .the-fst {
+        border: none;
+    }
+
+    .lgn-legend {
+        text-align: center;
+        font-size:30px;
+        font-weight: bold;
+        color: goldenrod;
+        padding-top: 15px;
+    }
+
+    .emll-lbl, .pswd-lbl {
+        display: block;
+        margin-top: 10px;
+        margin-bottom: 5px;
+    }
+
+    .emll, .pswd {
+        display: block;
+        height: 30px;     
+        width: 98%;
+        max-width: 98%;
+        font-family: roboto;
+        border: 1px solid darkgray;
+    }
+
+
+    .rememb {
+        margin-top: 10px;
+    }
+
+    .rememb-lbl {
+        font-size: 13px;
+    }
+
+    .the-subbb {
+        margin-top: 10px;
+        margin-left: 15px;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        padding-left: 15px;
+        padding-right: 15px;
+        border-radius: 5px;
+        border: none;
+        color: white;
+        background-color: goldenrod;
+        font-family: roboto, sans-serif;
+    }
+
+    .the-subbb:active {
+        background-color: white;
+        color: goldenrod;
+    }
+
+    .forgot-pswd {
+        margin-top: 10px;
+        margin-left: 15px;
+        font-family: roboto, sans-serif;
+    }
+
+    .forgot-pswd-link {
+        text-decoration: none;
+        color: #007bff;
+        font-family: roboto, sans-serif;
+    }
+
+
+    .lgn-already {
+        margin-top: 10px;
+        text-align: center;
+    }
+
+
+
+    .lgn-already-link {
+        text-decoration: none;
+        color: goldenrod;
+    }
+
+    .the-emll-error, .the-pswd-error {
+        color: red;
+        display: block;
+    }
+
+    .emll-error, .pswd-error {
+        display: block;
+        border: 1px solid red;
+        height: 30px;
+        width: 98%;
+        max-width: 98%;
+    }
+}
+
+
+@media (min-width:769px) {
+    body {
+        margin: 0;
+    }
+
+    .lgn-container {
+        margin-top: 80px;
+        border: 1px solid goldenrod;
+        width: 55%;
+        margin-left: 240px;
+        font-family: roboto, sans-serif;
+        padding: 30px;
+    }
+
+    .the-fst {
+        border: none;
+        padding-top: 50px;
+    }
+
+    .lgn-legend {
+        text-align: center;
+        font-weight: bold;
+        font-size: 25px;
+        color: goldenrod;
+    }
+
+    .emll-lbl, .pswd-lbl {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: goldenrod;
+
+    }
+
+    .emll-error, .pswd-error {
+        border: 1px solid red;
+        height: 35px;
+        width: 90%;
+    }
+
+    .the-emll-error, .the-pswd-error {
+        display: block;
+        color: red;
+        font-size: 13px;
+        font-family: 'Times New Roman', Times, serif;
+    }
+
+    .emll, .pswd {
+        display: block;
+        height: 35px;
+        width: 90%;
+        margin-bottom: 5px;
+        border: 1px solid gray;
+    }
+
+    .rememb {
+        margin-top: 10px;
+    }
+
+    .rememb-lbl {
+        font-size: 13px;
+    }
+
+    .the-subbb {
+        border: none;
+        background-color: goldenrod;
+        color: white;
+        font-family: roboto, sans-serif;
+        padding: 7px 6px;
+        border-radius: 4px;
+        margin-left: 15px;
+        cursor: pointer;
+    }
+
+    .the-subbb:hover {
+        color: goldenrod;
+        background-color: white;
+        border: 1px solid goldenrod;
+    }
+
+
+    .the-subbb:active {
+        background-color: goldenrod;
+        color: white;
+    }
+
+    .forgot-pswd {
+        margin-top: 10px;
+        margin-left: 15px;
+        font-family: roboto, sans-serif;
+    }
+
+    .forgot-pswd-link {
+        text-decoration: none;
+        color: #007bff;
+        font-family: roboto, sans-serif;
+    }
+
+    .lgn-already {
+        display: flex;
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .lgn-small-already {
+        font-size: 12px;
+    }
+
+    .lgn-already-link {
+        text-decoration: none;
+        color: goldenrod;
+    }
+
+
+}

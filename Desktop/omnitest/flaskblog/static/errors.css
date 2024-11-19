@@ -1,0 +1,34 @@
+@media (max-width:768px) {
+    body {
+        margin: 0;
+    }
+
+    .error-box {
+        margin-top: 100px;
+        border: 1px solid goldenrod;
+        padding: 30px;
+        width: 65%;
+        text-align: center;
+        margin-left: 10%;
+        font-family: roboto, sans-serif;
+    }
+}
+
+
+
+@media (min-width:769px) {
+    body {
+        margin: 0;
+    }
+
+    .error-box {
+        margin-top: 100px;
+        border: 1px solid goldenrod;
+        padding: 30px;
+        width: 65%;
+        text-align: center;
+        margin-left: 10%;
+        font-family: roboto, sans-serif;
+    }
+}
+
